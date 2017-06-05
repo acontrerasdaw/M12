@@ -1,0 +1,93 @@
+.titulo {
+    color: #FF2C28;
+    margin-left: 0%;
+    float: left;
+}
+
+.logo {
+    margin-left: 90%;
+}
+
+.logo img{
+    height:100px;
+}
+
+.Cabecera{
+    background-image: url(../img/fondotitulo.jpg);
+    text-shadow: -1px -1px 1px white, 1px 1px 1px white, -1px 1px 1px white, 1px -1px 1px white;
+}
+
+.Contenedor{
+    margin-top:100px ;
+    width:100%;
+    height:100%;
+}
+
+.bloque{
+    display: inline-block;
+}
+
+.post1{
+    text-align: center;
+    width: 49.5%;
+    height:49.5%;
+}
+
+
+.post2{
+    text-align: center;
+    width: 49.5%;
+    height: 49.5%;
+}
+
+
+.post3{
+    text-align: center;
+    width: 49.5%;
+    height:49.5%;
+}
+
+
+.post4{
+    text-align: center;
+    width: 49.5%;
+    height:49.5%;
+}
+
+.imagenoticia{
+    width: 50%;
+    height:50%;
+
+
+}
+
+.noticia{
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FF2C28;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-weight:bold;
+
+}
+
+li a:hover {
+    background-color: white;
+    color: #FF2C28;
+}
