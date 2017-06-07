@@ -13,7 +13,7 @@
             <div class="titulo">
                 <h1>Training Book-Self</h1>
             </div>
-            <div class="logo" >
+            <div class="logo">
                 <IMG SRC="./img/logo.png" alt="Logo Mugendo"/>
             </div>
         </div>
@@ -21,7 +21,7 @@
         <div class="Menu">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#reservas">Reserva</a></li>
+                <li><a href="./view/reserva.php">Reserva</a></li>
                 <li><a href="#novedades">Novedades</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
