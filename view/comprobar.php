@@ -17,7 +17,7 @@ if(isset($enviar)){
     if($nomReserva === "") {
         $errorNom = $errors[0];
         $errores = TRUE;
-    }elseif (!ctype_alpha($nomReserva)) {//Només lletres i espais
+    }elseif (!ctype_alpha(str_replace(' ','',$nomReserva))) {//Només lletres i espais
         $errorNom = $errors[1];
         $errores = TRUE;
     }
