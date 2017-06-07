@@ -10,8 +10,10 @@ $(document).ready(function(){
         },
         theme:'dark',
         dayOfWeekStart:'1',
-        disabledDates:['25.12.2017','24.06.2017','15.08.2017','01.01.2017','23.06.2017'],
-        formatDate:'d.m.Y'
+        disabledDates:['2017.12.25','2017.06.24','2017.08.15','2017.01.01'],
+        timepicker:false,
+        formatDate:'Y/m/d',
+        minDate:'-1970/01/02'
         
     });
 });
