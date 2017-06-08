@@ -37,7 +37,7 @@ $resultat;
             </ul>
         </div>
         <?php
-        $IniciTaula='<form method="post" action="borrar.php"><table border="1"><th>Nombre</th><th>Email</th><th>Telefono</th><th>Arte marcial</th><th>Fecha y Hora</th><th>Borrar</th>';//emmagatzem l'inici de la taula en una variable
+        $IniciTaula='<table border="1"><th>Nombre</th><th>Email</th><th>Telefono</th><th>Arte marcial</th><th>Fecha y Hora</th><th>Borrar</th>';//emmagatzem l'inici de la taula en una variable
         echo $IniciTaula;
         // bucle per recuperar resultats
         while ($fila = $resultat->fetch_assoc()) {
@@ -47,10 +47,12 @@ $resultat;
             echo '<td>'.$fila['telefonoReserva'].'</td>';
             echo '<td>'.$fila['arteReserva'].'</td>';
             echo '<td>'.$fila['fechaHoraReserva'].'</td>';
-            echo '<td align="center" valign="middle"><input type="hidden" name="NumReserva" value='.$fila['NumReserva'].'"><a href="javascript:document.forms[0].submit()"><img class="icono" src="../img/trash.ico"></a></td>';
+            echo '<td align="center" valign="middle"><form id='.$fila['NumReserva'].' method="post" action="borrar.php"><input type="hidden" name="NumReserva" value='.$fila['NumReserva'].'><a href="javascript:document.getElementById('.$fila['NumReserva'].').submit();"><img class="icono" src="../img/trash.ico"></a></form></td>';
+            //echo "<script>alert(".$fila['NumReserva'].")</script>";
+
             echo '</tr>';
         }
-        echo '</table></form>';
+        echo '</table>';
         ?>
         //Cabrera!!!!!!, ponlo bonito esto -------------------------------------------------------------------------------------
         <a href="salirSesion.php"><img src="" alt="Salir"></a>

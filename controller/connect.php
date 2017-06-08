@@ -31,7 +31,6 @@ try {
             break;
         case "/M12/view/borrar.php":
             $query03 = "DELETE FROM Reservas where NumReserva=".$NumReserva;
-
             $mysqli->query($query03);
             //header('Location: ../view/correcto2.php');
             break;
