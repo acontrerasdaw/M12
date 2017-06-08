@@ -44,7 +44,7 @@ $query = "SELECT NumReserva,NomReserva, emailReserva, telefonoReserva, arteReser
             echo '<td>'.$fila['telefonoReserva'].'</td>';
             echo '<td>'.$fila['arteReserva'].'</td>';
             echo '<td>'.$fila['fechaHoraReserva'].'</td>';
-            echo '<td><a href=""><img class="icono" src="../img/trash.ico"></a></td>';
+            echo '<td align="center" valign="middle"><a href="borrar.php?NumReserva='.$fila['NumReserva'].'"><img class="icono" src="../img/trash.ico"></a></td>';
             echo '</tr>';
         }
         echo '</table>';
