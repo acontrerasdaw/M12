@@ -8,7 +8,7 @@ if ($mysqli->connect_error) {
 //header
 $query = "INSERT INTO Reservas (NomReserva, emailReserva, telefonoReserva, arteReserva, fechaHoraReserva) VALUES ('" . $nomReserva . "','" . $emailReserva_Sano . "'," . $telefonoReserva . ",'" . $arteReserva . "','" . $fechaHoraReserva . "')";
 //$tildes=$mysqli->query("SET NAMES 'utf8'");
-//$query02 = "";
+$query02 = "SELECT * FROM login";
 
 try {
     $url = filter_input(INPUT_SERVER, "REQUEST_URI");
@@ -19,14 +19,14 @@ try {
             header('Location: ../view/correcto.php');
             break;
         case "/M12/view/login2.php":
-            //$mysqli->query($query02);
-            echo 'muuu bien!!!';
+            $resultadoLogin = $mysqli->query($query02);
+            //echo 'muuu bien!!!';
             break;
         case "/M12/view/listado.php":
-            echo "listado";
+            //echo "listado";
             break;
         default:
-            
+            //Proves
             break;
     }
 } catch (Exception $e) {
