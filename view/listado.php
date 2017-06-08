@@ -54,5 +54,7 @@ $query = "SELECT NumReserva,NomReserva, emailReserva, telefonoReserva, arteReser
         }
         echo '</table>';
         ?>
+        //Cabrera!!!!!!, ponlo bonito esto -------------------------------------------------------------------------------------
+        <a href="salirSesion.php"><img src="" alt="Salir"></a>
     </body>
 </html>
