@@ -4,11 +4,7 @@ session_start();
 if (!isset($_SESSION['training'])) {
     header('Location: login.php'); //Si no hi ha sessió iniciada, torna
 }
-$mysqli=new mysqli('localhost','root','','TBS');
-if($mysqli->connect_error){
-    die('Error de conexión ('.$mysqli->connect_errno.')'.$mysqli->connect_error);
-}
-$query = "SELECT NumReserva,NomReserva, emailReserva, telefonoReserva, arteReserva, fechaHoraReserva FROM Reservas ORDER BY fechaHoraReserva";
+
 ?>
 <!DOCTYPE html>
 <!--
@@ -38,8 +34,7 @@ $query = "SELECT NumReserva,NomReserva, emailReserva, telefonoReserva, arteReser
             </ul>
         </div>
         <?php
-        $resultat = $mysqli->query($query);
-        $IniciTaula='<table border="1"><th>Nombre</th><th>Email</th><th>Telefono</th><th>Arte marcial</th><th>Fecha y Hora</th><th>Borrar</th>';//emmagatzem l'inici de la taula en una variable
+        $IniciTaula='<form method="post" action="borrar.php"><table border="1"><th>Nombre</th><th>Email</th><th>Telefono</th><th>Arte marcial</th><th>Fecha y Hora</th><th>Borrar</th>';//emmagatzem l'inici de la taula en una variable
         echo $IniciTaula;
         // bucle per recuperar resultats
         while ($fila = $resultat->fetch_assoc()) {
@@ -49,10 +44,10 @@ $query = "SELECT NumReserva,NomReserva, emailReserva, telefonoReserva, arteReser
             echo '<td>'.$fila['telefonoReserva'].'</td>';
             echo '<td>'.$fila['arteReserva'].'</td>';
             echo '<td>'.$fila['fechaHoraReserva'].'</td>';
-            echo '<td align="center" valign="middle"><a href="borrar.php?NumReserva='.$fila['NumReserva'].'"><img class="icono" src="../img/trash.ico"></a></td>';
+            echo '<td align="center" valign="middle"><input type="hidden" name="NumReserva" value='.$fila['NumReserva'].'"><a href="javascript:document.forms[0].submit()"><img class="icono" src="../img/trash.ico"></a></td>';
             echo '</tr>';
         }
-        echo '</table>';
+        echo '</table></form>';
         ?>
         //Cabrera!!!!!!, ponlo bonito esto -------------------------------------------------------------------------------------
         <a href="salirSesion.php"><img src="" alt="Salir"></a>

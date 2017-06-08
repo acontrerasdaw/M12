@@ -10,6 +10,7 @@ $query = "INSERT INTO Reservas (NomReserva, emailReserva, telefonoReserva, arteR
 //$tildes=$mysqli->query("SET NAMES 'utf8'");
 $query02 = "SELECT * FROM login";
 $query03 = "DELETE FROM Reservas where NumReserva=".$NumReserva;
+$query04 = "SELECT NumReserva,NomReserva, emailReserva, telefonoReserva, arteReserva, fechaHoraReserva FROM Reservas ORDER BY fechaHoraReserva";
 echo "<script>console.log(".$NumReserva.");</script>";
 try {
     $url = filter_input(INPUT_SERVER, "REQUEST_URI");
@@ -24,11 +25,13 @@ try {
             //echo 'muuu bien!!!';
             break;
         case "/M12/view/listado.php":
+            $resultat = $mysqli->query($query04);
+            echo $resultat;
             //echo "listado";
             break;
         case "/M12/view/borrar.php":
-            echo 'djshjdhjashdjhjhjahfjhjafjhasfhjas';
             $mysqli->query($query03);
+            //header('Location: ../view/correcto2.php');
             break;
         default:
             //Proves
