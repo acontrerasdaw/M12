@@ -22,6 +22,9 @@ try {
             //$mysqli->query($query02);
             echo 'muuu bien!!!';
             break;
+        case "/M12/view/listado.php":
+            echo "listado";
+            break;
         default:
             
             break;
