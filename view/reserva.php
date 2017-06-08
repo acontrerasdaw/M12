@@ -44,8 +44,12 @@ require './comprobar.php';
                             </tr>
                             <tr>
                                 <td>Teléfono:</td>
-                                <td><input type="text" maxlength="9" name="telefonoReserva" value="<?php echo $telefonoReserva; ?>"/>
-                                    <span class="error"><?php echo $errorTelefonoReserva; ?></span></td>
+                                <?php 
+                                    if($telefonoReserva===0){
+                                        $telefonoReserva="";
+                                    }
+                                ?>
+                                <td><input type="text" maxlength="9" name="telefonoReserva" value="<?php echo $telefonoReserva ?>"/>
                             </tr>
                             <tr>
                                 <td>Arte marcial:</td>

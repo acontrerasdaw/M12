@@ -28,9 +28,10 @@ if(isset($enviar)){
         $errorEmailReserva= $errors[5];
         $errores = TRUE;
     }
-    if($telefonoReserva === "") {
-        $errorTelefonoReserva = $errors[0];
-        $errores = TRUE;
+    if($telefonoReserva === "") {//como puede estar a NULL en la base de datos, dejamos que el campo telefono pueda estar vacío
+        //$errorTelefonoReserva = $errors[0];
+        //$errores = FALSE;
+        $telefonoReserva=0;//SIN TELEFONO
     }elseif(!ctype_digit($telefonoReserva)){
         $errorTelefonoReserva = $errors[6];
         $errores = TRUE;
