@@ -191,3 +191,8 @@ span.error{
     color:red;
     font-weight: bold;
 }
+
+img.icono{
+    width: 25px;
+    height: 25px;
+}
