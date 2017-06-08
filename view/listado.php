@@ -10,7 +10,7 @@
     <body>
         <div class="Cabecera">
             <div class="titulo">
-                <a href="index.php" class="noticia"> <h1>Training Book-Self</h1></a>
+                <a href="../index.php" class="noticia"> <h1>Training Book-Self</h1></a>
             </div>
             <div class="logo">
                 <IMG SRC="./img/logo.png" alt="Logo Mugendo"/>
