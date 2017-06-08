@@ -34,12 +34,12 @@ require './comprobar.php';
                         <table>
                             <tr>
                                 <td>Nombre:</td>
-                                <td><input type="text" maxlength="50" name="nomReserva" value="<?php echo $nomReserva; ?>"/>
+                                <td><input type="text" maxlength="50" name="nomReserva" value="<?php echo $nomReserva; ?>"/>*
                                     <span class="error"><?php echo $errorNom; ?></span></td>
                             </tr>
                             <tr>
                                 <td>Email:</td>
-                                <td><input type="email" maxlength="50" name="emailReserva" value="<?php echo $emailReserva_Sano;?>"/>
+                                <td><input type="email" maxlength="50" name="emailReserva" value="<?php echo $emailReserva_Sano;?>"/>*
                                 <span class="error"><?php echo $errorEmailReserva; ?></span></td>
                             </tr>
                             <tr>
@@ -59,18 +59,19 @@ require './comprobar.php';
                                         <option value="Judo">Judo</option>
                                         <option value="Taekwondo">Taekwondo</option>
                                         <option value="Kendo">Kendo</option>
-                                    </select>
+                                    </select>*
                                 </td>
                             </tr>
                             <tr>
                                 <td>Fecha y hora:</td>
-                                <td><input id="datetimepicker" name="fechaHoraReserva" type="text" value="<?php echo $fechaHoraReserva; ?>"/>
+                                <td><input id="datetimepicker" name="fechaHoraReserva" type="text" value="<?php echo $fechaHoraReserva; ?>"/>*
                                 <span class="error"><?php echo $errorFechaHoraReserva; ?></span></td>
                             </tr>
                             <tr>
                                 <td colspan="2"><input type="submit" value="Reservar" name="reservar"/></td>
                             </tr>
                         </table>
+                        <span class="peque">* Campo obligatorio</span>
                     </fieldset>
                 </form>
             </div>
