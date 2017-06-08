@@ -9,6 +9,7 @@ if ($mysqli->connect_error) {
 $query = "INSERT INTO Reservas (NomReserva, emailReserva, telefonoReserva, arteReserva, fechaHoraReserva) VALUES ('" . $nomReserva . "','" . $emailReserva_Sano . "'," . $telefonoReserva . ",'" . $arteReserva . "','" . $fechaHoraReserva . "')";
 //$tildes=$mysqli->query("SET NAMES 'utf8'");
 $query02 = "SELECT * FROM login";
+$query03 = "DELETE FROM Reservas where NumReserva='".$NumReserva."'";
 
 try {
     $url = filter_input(INPUT_SERVER, "REQUEST_URI");
@@ -24,6 +25,9 @@ try {
             break;
         case "/M12/view/listado.php":
             //echo "listado";
+            break;
+        case "/M12/view/borrar.php":
+            $NumReserva = $mysqli->query($query03);
             break;
         default:
             //Proves
