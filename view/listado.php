@@ -4,7 +4,10 @@ session_start();
 if (!isset($_SESSION['training'])) {
     header('Location: login.php'); //Si no hi ha sessió iniciada, torna
 }
-include '../controller/connect.php';
+require '../controller/connect.php';
+
+$resultat;
+
 ?>
 <!DOCTYPE html>
 <!--
