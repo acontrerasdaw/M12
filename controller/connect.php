@@ -27,7 +27,7 @@ try {
             //echo "listado";
             break;
         case "/M12/view/borrar.php":
-            
+            echo 'djshjdhjashdjhjhjahfjhjafjhasfhjas';
             $mysqli->query($query03);
             break;
         default:
