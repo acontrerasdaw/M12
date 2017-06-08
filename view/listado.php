@@ -1,4 +1,9 @@
 <?php
+// Start the session
+session_start();
+if (!isset($_SESSION['training'])) {
+    header('Location: login.php'); //Si no hi ha sessió iniciada, torna
+}
 $mysqli=new mysqli('localhost','root','','TBS');
 if($mysqli->connect_error){
     die('Error de conexión ('.$mysqli->connect_errno.')'.$mysqli->connect_error);
