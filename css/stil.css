@@ -240,6 +240,7 @@ a img.iconosal{
 }
 
 .datos{
+    font-size: 22px;
     text-align: left;
     font-weight: bold;
 }
@@ -249,3 +250,9 @@ iframe{
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
 }
+
+.enlace{
+    text-decoration: none;
+    color: #424242;
+}
+

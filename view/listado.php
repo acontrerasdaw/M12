@@ -3,6 +3,8 @@
 session_start();
 if (!isset($_SESSION['training'])) {
     header('Location: login.php'); //Si no hi ha sessió iniciada, torna
+}else{
+    $registrado = TRUE;
 }
 require '../controller/connect.php';
 
@@ -31,7 +33,13 @@ $resultat;
             <ul>
                 <li><a href="../index.php">Home</a></li>
                 <li><a href="./reserva.php">Reserva</a></li>
-                <li><a href="./login.php">Login</a></li>
+                <?php
+                    if(!$registrado){
+                        echo '<li><a href="./login.php">Login</a></li>';
+                    }else{
+                        echo '<li><a href="./listado.php">Listado</a></li>';
+                    }
+                ?>
                 <li><a href="./contacto.php">Contacto</a></li>
             </ul>
         </div>
