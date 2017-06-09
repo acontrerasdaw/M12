@@ -37,6 +37,7 @@ $resultat;
             </ul>
         </div>
         <?php
+        echo 'Bienvenido '.$_SESSION['training'];
         $IniciTaula='<table border="1"><th>Nombre</th><th>Email</th><th>Telefono</th><th>Arte marcial</th><th>Fecha y Hora</th><th>Borrar</th>';//emmagatzem l'inici de la taula en una variable
         echo $IniciTaula;
         // bucle per recuperar resultats
@@ -44,7 +45,12 @@ $resultat;
             echo '<tr>';
             echo '<td>'.$fila['NomReserva'].'</td>';
             echo '<td>'.$fila['emailReserva'].'</td>';
-            echo '<td>'.$fila['telefonoReserva'].'</td>';
+            if($fila['telefonoReserva']==0){
+                echo '<td>No se ha introducido</td>';
+            }else{
+                echo '<td>'.$fila['telefonoReserva'].'</td>';
+
+            }
             echo '<td>'.$fila['arteReserva'].'</td>';
             echo '<td>'.$fila['fechaHoraReserva'].'</td>';
             echo '<td align="center" valign="middle"><form id='.$fila['NumReserva'].' method="post" action="borrar.php"><input type="hidden" name="NumReserva" value='.$fila['NumReserva'].'><a href="javascript:document.getElementById('.$fila['NumReserva'].').submit();"><img class="icono" src="../img/trash.ico"></a></form></td>';
@@ -55,6 +61,6 @@ $resultat;
         echo '</table>';
         ?>
         //Cabrera!!!!!!, ponlo bonito esto -------------------------------------------------------------------------------------
-        <a href="salirSesion.php"><img src="" alt="Salir"></a>
+        <a href="salirSesion.php"><img class="icono" src="../img/exit.png" alt="Salir"/></a>
     </body>
 </html>

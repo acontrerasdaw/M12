@@ -194,3 +194,8 @@ a img.icono{
 .peque{
     font-size: xx-small;
 }
+
+.botonSalir{
+    text-decoration: none;
+    color:black;
+}
