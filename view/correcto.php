@@ -22,8 +22,8 @@
             <ul>
                 <li><a href="../index.php">Home</a></li>
                 <li><a href="./reserva.php">Reserva</a></li>
-                <li><a href="#novedades">Novedades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="./login.php">Login</a></li>
+                <li><a href="./contacto.php">Contacto</a></li>
             </ul>
         </div>
         <div class="happy2">

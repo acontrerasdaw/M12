@@ -155,6 +155,24 @@ table{
     background-size: cover;
 }
 
+.superfondo2{
+    background-image: url(../img/zen3.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.superfondo3{
+    background-image: url(../img/j.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .formulario{
     width:50%;
     margin: 0 auto;
@@ -164,11 +182,23 @@ table{
 
 }
 
+.login{
+    width:44%;
+    margin: 0 auto;
+    margin-top: 15%;
+    margin-bottom: 25%;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.trboton{
+    text-align :center;
+}
+
 .happy2{
     width:600px;
     height: 520px;
     margin: 0 auto;
-    background-color: rgba(0,0,0);/*cabrera, aqui te has dejado la transparencia xD*/
+    background-color: rgba(0,0,0,0);
 }
 
 .happy{
@@ -191,11 +221,31 @@ a img.icono{
     height: 25px;
 }
 
+a img.iconosal{
+    width: 25px;
+    height: 25px;
+}
+
+
 .peque{
     font-size: xx-small;
 }
 
-.botonSalir{
-    text-decoration: none;
-    color:black;
+.contacto{
+
+    width: 80%;
+    margin: 0 auto; 
+    height: 500px;
+    margin-top: 10%
+}
+
+.datos{
+    text-align: left;
+    font-weight: bold;
+}
+
+iframe{
+    border: 4px solid rgba(0,0,0,0.8);
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
 }

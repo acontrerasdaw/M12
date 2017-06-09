@@ -22,8 +22,8 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="./view/reserva.php">Reserva</a></li>
-                <li><a href="#novedades">Novedades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="./view/login.php">Login</a></li>
+                <li><a href="./view/contacto.php">Contacto</a></li>
             </ul>
         </div>
         <h1 class="NOTICIAS">NOTICIAS</h1>
@@ -53,7 +53,7 @@
                 <a href="" class="noticia"><p>Nuevas clases de aikidō</p></a>  
             </div>
         </div>
-        <h1 class="NOTICIAS">HISTÓRIA</h1>
+        <h1 class="NOTICIAS">HISTORIA</h1>
         <div class="historia">
             <div class="textohist">
                 <p>Hoy, explicaremos la história del aikidō.</p>

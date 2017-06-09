@@ -23,8 +23,8 @@ require './comprobar.php';
                 <ul>
                     <li><a href="../index.php">Home</a></li>
                     <li><a href="./reserva.php">Reserva</a></li>
-                    <li><a href="#novedades">Novedades</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                <li><a href="./login.php">Login</a></li>
+                <li><a href="./contacto.php">Contacto</a></li>
                 </ul>
             </div>
             <div class="formulario">
@@ -50,6 +50,8 @@ require './comprobar.php';
                                     }
                                 ?>
                                 <td><input type="text" maxlength="9" name="telefonoReserva" value="<?php echo $telefonoReserva ?>"/>
+                                <span class="error"><?php echo $errorTelefonoReserva; ?></span></td>
+
                             </tr>
                             <tr>
                                 <td>Arte marcial:</td>

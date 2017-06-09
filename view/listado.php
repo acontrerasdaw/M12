@@ -7,7 +7,6 @@ if (!isset($_SESSION['training'])) {
 require '../controller/connect.php';
 
 $resultat;
-
 ?>
 <!DOCTYPE html>
 <!--
@@ -32,35 +31,34 @@ $resultat;
             <ul>
                 <li><a href="../index.php">Home</a></li>
                 <li><a href="./reserva.php">Reserva</a></li>
-                <li><a href="#novedades">Novedades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="./login.php">Login</a></li>
+                <li><a href="./contacto.php">Contacto</a></li>
             </ul>
         </div>
         <?php
-        echo 'Bienvenido '.$_SESSION['training'];
-        $IniciTaula='<table border="1"><th>Nombre</th><th>Email</th><th>Telefono</th><th>Arte marcial</th><th>Fecha y Hora</th><th>Borrar</th>';//emmagatzem l'inici de la taula en una variable
+        echo '<h3 class="welcome">Bienvenido ' . $_SESSION['training'] . '</h3>';
+        $IniciTaula = '<table border="1" class="reservas"><th>Nombre</th><th>Email</th><th>Telefono</th><th>Arte marcial</th><th>Fecha y Hora</th><th>Borrar</th>'; //emmagatzem l'inici de la taula en una variable
         echo $IniciTaula;
         // bucle per recuperar resultats
         while ($fila = $resultat->fetch_assoc()) {
             echo '<tr>';
-            echo '<td>'.$fila['NomReserva'].'</td>';
-            echo '<td>'.$fila['emailReserva'].'</td>';
-            if($fila['telefonoReserva']==0){
+            echo '<td>' . $fila['NomReserva'] . '</td>';
+            echo '<td>' . $fila['emailReserva'] . '</td>';
+            if ($fila['telefonoReserva'] == 0) {
                 echo '<td>No se ha introducido</td>';
-            }else{
-                echo '<td>'.$fila['telefonoReserva'].'</td>';
-
+            } else {
+                echo '<td>' . $fila['telefonoReserva'] . '</td>';
             }
-            echo '<td>'.$fila['arteReserva'].'</td>';
-            echo '<td>'.$fila['fechaHoraReserva'].'</td>';
-            echo '<td align="center" valign="middle"><form id='.$fila['NumReserva'].' method="post" action="borrar.php"><input type="hidden" name="NumReserva" value='.$fila['NumReserva'].'><a href="javascript:document.getElementById('.$fila['NumReserva'].').submit();"><img class="icono" src="../img/trash.ico"></a></form></td>';
-            //echo "<script>alert(".$fila['NumReserva'].")</script>";
-
+            echo '<td>' . $fila['arteReserva'] . '</td>';
+            echo '<td>' . $fila['fechaHoraReserva'] . '</td>';
+            echo '<td align="center" valign="middle"><form id=' . $fila['NumReserva'] . ' method="post" action="borrar.php"><input type="hidden" name="NumReserva" value=' . $fila['NumReserva'] . '><a href="javascript:document.getElementById(' . $fila['NumReserva'] . ').submit();"><img class="icono" src="../img/trash.ico"></a></form></td>';
             echo '</tr>';
         }
         echo '</table>';
         ?>
-        //Cabrera!!!!!!, ponlo bonito esto -------------------------------------------------------------------------------------
-        <a href="salirSesion.php"><img class="icono" src="../img/exit.png" alt="Salir"/></a>
+        <a href="salirSesion.php"><img class="iconosal" src="../img/exit.png" alt="Salir"/></a><!-- modificar imagen para poner texto -->
+        <footer>
+            Copyright reserved to Training Book-Self&copy;
+        </footer>
     </body>
 </html>
