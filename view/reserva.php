@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (isset($_SESSION['training'])) {
+    $logueado = TRUE;
+} else {
+    $logueado = FALSE;
+}
 require './comprobar.php';
 ?>
 <html>
@@ -23,8 +29,14 @@ require './comprobar.php';
                 <ul>
                     <li><a href="../index.php">Home</a></li>
                     <li><a href="./reserva.php">Reserva</a></li>
-                <li><a href="./login.php">Login</a></li>
-                <li><a href="./contacto.php">Contacto</a></li>
+                    <?php
+                    if (!$logueado) {
+                        echo '<li><a href="./login.php">Login</a></li>';
+                    } else {
+                        echo '<li><a href="./listado.php">Listado</a></li>';
+                    }
+                    ?>
+                    <li><a href="./contacto.php">Contacto</a></li>
                 </ul>
             </div>
             <div class="formulario">
@@ -39,18 +51,18 @@ require './comprobar.php';
                             </tr>
                             <tr>
                                 <td>Email:</td>
-                                <td><input type="email" maxlength="50" name="emailReserva" value="<?php echo $emailReserva_Sano;?>"/>*
-                                <span class="error"><?php echo $errorEmailReserva; ?></span></td>
+                                <td><input type="email" maxlength="50" name="emailReserva" value="<?php echo $emailReserva_Sano; ?>"/>*
+                                    <span class="error"><?php echo $errorEmailReserva; ?></span></td>
                             </tr>
                             <tr>
                                 <td>Teléfono:</td>
-                                <?php 
-                                    if($telefonoReserva===0){
-                                        $telefonoReserva="";
-                                    }
+                                <?php
+                                if ($telefonoReserva === 0) {
+                                    $telefonoReserva = "";
+                                }
                                 ?>
                                 <td><input type="text" maxlength="9" name="telefonoReserva" value="<?php echo $telefonoReserva ?>"/>
-                                <span class="error"><?php echo $errorTelefonoReserva; ?></span></td>
+                                    <span class="error"><?php echo $errorTelefonoReserva; ?></span></td>
 
                             </tr>
                             <tr>
@@ -67,7 +79,7 @@ require './comprobar.php';
                             <tr>
                                 <td>Fecha y hora:</td>
                                 <td><input id="datetimepicker" name="fechaHoraReserva" type="text" value="<?php echo $fechaHoraReserva; ?>"/>*
-                                <span class="error"><?php echo $errorFechaHoraReserva; ?></span></td>
+                                    <span class="error"><?php echo $errorFechaHoraReserva; ?></span></td>
                             </tr>
                             <tr>
                                 <td colspan="2"><input type="submit" value="Reservar" name="reservar"/></td>

@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['training'])) {
+    $logueado=TRUE;
+}else{
+    $logueado=FALSE;
+}
+?>
 <!DOCTYPE html>
 <!--
 
@@ -22,7 +30,13 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="./view/reserva.php">Reserva</a></li>
-                <li><a href="./view/login.php">Login</a></li>
+                <?php
+                    if(!$logueado){
+                        echo '<li><a href="./view/login.php">Login</a></li>';
+                    }else{
+                        echo '<li><a href="./view/listado.php">Listado</a></li>';
+                    }
+                ?>
                 <li><a href="./view/contacto.php">Contacto</a></li>
             </ul>
         </div>
