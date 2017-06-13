@@ -64,7 +64,7 @@ $resultat;
         }
         echo '</table>';
         ?>
-        <a href="salirSesion.php"><img class="iconosal" src="../img/exit.png" alt="Salir"/></a><!-- modificar imagen para poner texto -->
+        <a href="salirSesion.php"><img class="iconosal" src="../img/exit.png" alt="Salir"/></a>
         <footer>
             Copyright reserved to Training Book-Self&copy;
         </footer>
