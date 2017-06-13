@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['training'])) {
-    $logueado = TRUE;
+    $logueado = TRUE;//variable per a detectar si s'ha loguejat i mostrar link cap a listado.php
 } else {
     $logueado = FALSE;
 }

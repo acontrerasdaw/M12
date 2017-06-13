@@ -1,5 +1,4 @@
 <?php
-//require '../controller/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 require 'vendor/autoload.php';
 
 $mail = new PHPMailer;
@@ -15,12 +14,11 @@ $mail->SMTPSecure = 'tls';                           // Enable TLS encryption, `
 //$mail->SMTPSecure = 'ssl'; 
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom('beakertbs@gmail.com', 'Mailer'); // Destinatari
+$mail->setFrom('beakertbs@gmail.com', 'Reserva efectuada TBS'); // Destinatari
 //$mail->addAddress($emailReserva_Sano, $nomReserva);     // Receptor
-//$mail->addAddress('jaumealonso@hotmail.com', 'jjojjojo'); 
 //$mail->addAddress('beakertbs@gmail.com', 'Administrador');  // Name is optional
-//$mail->addReplyTo('beakerstb@gmail.com', 'Information');
-//$mail->addCC('beakerstb@gmail.com');
+//$mail->addReplyTo('beakertbs@gmail.com', 'Information');
+//$mail->addCC('beakertbs@gmail.com');
 $mail->addBCC('beakertbs@gmail.com', 'Administrador');
 $mail->addBCC($emailReserva_Sano, $nomReserva);
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
@@ -29,7 +27,7 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = 'Reserva TBS';
 $mail->Body    = 'Querido/a '.$nomReserva.' su reserva realizada: '.$fechaHoraReserva.' ha sido realizada con éxito con la siguiente disciplina: '.$arteReserva.'. En caso de cualquier clase de problema, se procederá a notificarse por correo electrónico.';
-//$mail->AltBody = 'cokisssssssssssssssssssssssss';
+//$mail->AltBody = 'Body alternativo';
 //$mail->SMTPDebug = 4;
 if(!$mail->send()) {
     echo 'Message could not be sent.';

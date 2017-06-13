@@ -1,5 +1,8 @@
 <?php
-//require '../controller/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
+/*
+    ARCHIVO NO UTILIZADO EN LA IMPLEMENTACIÓN
+    SOLO CONTIENE CODIGO BASE PARA HACER PRUEBAS DE ENVIO DE CORREO
+ */
 require './vendor/autoload.php';
 $mail = new PHPMailer;
 
@@ -15,7 +18,7 @@ $mail->SMTPSecure = 'tls';                           // Enable TLS encryption, `
 $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->setFrom('beakertbs@gmail.com', 'Mailer');
-$mail->addAddress('beakertbs@gmail.com', 'cabrera');     // Add a recipient
+$mail->addAddress('beakertbs@gmail.com', 'cliente');     // Add a recipient
 //$mail->addAddress('beakerstb@gmail.com');               // Name is optional
 //$mail->addReplyTo('beakerstb@gmail.com', 'Information');
 //$mail->addCC('beakerstb@gmail.com');
@@ -25,9 +28,9 @@ $mail->addAddress('beakertbs@gmail.com', 'cabrera');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'cagonto';
-$mail->Body    = 'saltaaaaaaa';
-//$mail->AltBody = 'cokisssssssssssssssssssssssss';
+$mail->Subject = 'Asunto';
+$mail->Body    = 'Cuerpo';
+//$mail->AltBody = 'Cuerpo alternativo';
 //$mail->SMTPDebug = 4;
 //if(!$mail->send()) {
 //    echo 'Message could not be sent.';

@@ -58,13 +58,7 @@ if (isset($_SESSION['training'])) {
                         </td>
                     </tr>
                 </table>
-
-
-
-
             </div>
-
-
         </div>
         <footer>
             Copyright reserved to Training Book-Self&copy;

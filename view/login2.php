@@ -1,5 +1,5 @@
 <?php
-// Start the session
+// Inici de sessio
 session_start();
 
 require '../controller/connect.php';
@@ -13,9 +13,8 @@ $trobat = FALSE; //Per indicar si s'ha trobat la coincidència entre names i pas
 // bucle per recuperar resultats
 while ($fila = $resultadoLogin->fetch_assoc()) {
     if ($fila['usuario'] == $nom && $fila['password'] == $password) {
-        //session_start(); //Vigila l'inici de sessió
         $_SESSION['training'] = $nom;
-        header('Location: listado.php'); //Si concuerdan, salta al tenis
+        header('Location: listado.php'); //Si concuerdan, salta al listado.php
         $trobat = TRUE;
     }
 }

@@ -1,14 +1,10 @@
 <?php
 
-//require './correo.php';
-
 $mysqli = new mysqli('localhost', 'root', '', 'TBS');
 if ($mysqli->connect_error) {
     die('Error de conexión (' . $mysqli->connect_errno . ')' . $mysqli->connect_error);
 }
 
-//header
-//$tildes=$mysqli->query("SET NAMES 'utf8'");
 
 try {
     $url = filter_input(INPUT_SERVER, "REQUEST_URI");
@@ -36,7 +32,6 @@ try {
             $capturaCancelacion = mysqli_fetch_array($row, MYSQLI_ASSOC);
             $mysqli->query($query03);
             require 'correoCancelacion.php';
-            //header('Location: ../view/correcto2.php');
             break;
         default:
             //Proves

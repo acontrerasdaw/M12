@@ -1,7 +1,5 @@
 <?php
-//archivo contenedor del formulario
-
-$enviar = filter_input(INPUT_POST, 'reservar');//reservar nombre boton
+$enviar = filter_input(INPUT_POST, 'reservar');//reservar = nombre boton
 $errorNom = $errorEmailReserva = $errorTelefonoReserva = $errorArteReserva = $errorFechaHoraReserva = "";
 $errores = FALSE;
 
@@ -29,8 +27,6 @@ if(isset($enviar)){
         $errores = TRUE;
     }
     if($telefonoReserva === "") {//como puede estar a NULL en la base de datos, dejamos que el campo telefono pueda estar vacío
-        //$errorTelefonoReserva = $errors[0];
-        //$errores = FALSE;
         $telefonoReserva=0;//SIN TELEFONO
     }elseif(!ctype_digit($telefonoReserva)){
         $errorTelefonoReserva = $errors[6];
@@ -45,15 +41,9 @@ if(isset($enviar)){
         $errores = TRUE;
     }
     
-//    if(($errorNom != "") && ($errorEmailReserva!="") && ($errorTelefonoReserva!="") && ($errorArteReserva!="") && ($errorFechaHoraReserva!="")){
     if(!$errores){        
-        //hacer conexion/include conexion
         include '../controller/connect.php';
-    }else{
-        //echo "<script>alert('Algo incorrecto');</script>";
-
     }
-    //Comprobar errores, si estan vacios, conexion BD mas añadir
     
 }else{//Evita errors, formulari no enviat
     $nomReserva = "";

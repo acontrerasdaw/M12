@@ -1,9 +1,9 @@
 <?php
 session_start();
 if (isset($_SESSION['training'])) {
-    $logueado=TRUE;
-}else{
-    $logueado=FALSE;
+    $logueado = TRUE;
+} else {
+    $logueado = FALSE;
 }
 ?>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ if (isset($_SESSION['training'])) {
                 <a href="../index.php" class="noticia"><h1>Training Book-Self</h1></a>
             </div>
             <div class="logo">
-                 <IMG SRC="../img/logo.png" alt="Logo Mugendo"/>
+                <IMG SRC="../img/logo.png" alt="Logo Mugendo"/>
             </div>
         </div>
 
@@ -31,28 +31,25 @@ if (isset($_SESSION['training'])) {
                 <li><a href="../index.php">Home</a></li>
                 <li><a href="./reserva.php">Reserva</a></li>
                 <?php
-                    if(!$logueado){
-                        echo '<li><a href="./login.php">Login</a></li>';
-                    }else{
-                        echo '<li><a href="./listado.php">Listado</a></li>';
-                    }
+                if (!$logueado) {
+                    echo '<li><a href="./login.php">Login</a></li>';
+                } else {
+                    echo '<li><a href="./listado.php">Listado</a></li>';
+                }
                 ?>
                 <li><a href="./contacto.php">Contacto</a></li>
             </ul>
         </div>
         <div class="happy2">
-        <div class="happy">
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <h2>Su reserva ha sido completada satisfactoriamente</h2>
-        <a href="../index.php" class="noticia2">Volver al inicio</a>
+            <div class="happy">
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <h2>Su reserva ha sido completada satisfactoriamente</h2>
+                <a href="../index.php" class="noticia2">Volver al inicio</a>
+            </div>
         </div>
-        </div>
-
-
-
-    <footer>
-    Copyright reserved to Training Book-Self&copy;
-    </footer>
+        <footer>
+            Copyright reserved to Training Book-Self&copy;
+        </footer>
 
     </body>
 
