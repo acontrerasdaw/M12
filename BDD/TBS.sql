@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 13-06-2017 a las 15:37:51
+-- Tiempo de generación: 13-06-2017 a las 19:05:05
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 7.0.9
 
@@ -60,10 +60,11 @@ CREATE TABLE `Reservas` (
 INSERT INTO `Reservas` (`NumReserva`, `NomReserva`, `emailReserva`, `telefonoReserva`, `arteReserva`, `fechaHoraReserva`) VALUES
 (3, 'Aonso', 'odakesama@hotmail.com', 666666666, 'Kick Boxing', '2017/06/08 09:30'),
 (5, 'Alejandro Contreras', 'jandroakagi@gmail.com', 0, 'Taekwondo', '2017/06/19 15:30'),
-(6, 'Adrian Cabrera', 'matacabrasS@gmail.com', 666555999, 'Kendo', '2017/06/27 12:30'),
 (7, 'Jaume Aonso', 'odakesama@gmail.com', 0, 'Judo', '2017/06/30 15:30'),
 (8, 'Juan', 'juan@gmail.com', 123456789, 'Taekwondo', '2017/08/17 09:30'),
-(9, 'Alex', 'jandroakagi@hotmail.com', 987654312, 'Judo', '2017/06/19 16:30');
+(9, 'Alex', 'jandroakagi@hotmail.com', 987654312, 'Judo', '2017/06/19 16:30'),
+(10, 'Alejandro Contreras', 'jandroakagi@gmail.com', 671404295, 'Kendo', '2017/06/26 15:30'),
+(11, 'Adrian', 'matacabrasS@gmail.com', 605466093, 'Kick Boxing', '2017/06/13 11:30');
 
 --
 -- Índices para tablas volcadas
@@ -89,7 +90,7 @@ ALTER TABLE `Reservas`
 -- AUTO_INCREMENT de la tabla `Reservas`
 --
 ALTER TABLE `Reservas`
-  MODIFY `NumReserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `NumReserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
