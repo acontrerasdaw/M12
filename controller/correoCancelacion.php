@@ -28,7 +28,7 @@ $mail->addBCC($capturaCancelacion['emailReserva'], $capturaCancelacion['NomReser
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Reserva TBS';
-$mail->Body    = 'Querido '.$capturaCancelacion['NomReserva'].' su reserva del día '.$capturaCancelacion['fechaHoraReserva'].' ha sido cancelada con éxito.';
+$mail->Body    = 'Querido/a '.$capturaCancelacion['NomReserva'].' su reserva del día '.$capturaCancelacion['fechaHoraReserva'].' ha sido cancelada con éxito.';
 //$mail->AltBody = 'cokisssssssssssssssssssssssss';
 //$mail->SMTPDebug = 4;
 if(!$mail->send()) {

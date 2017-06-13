@@ -28,7 +28,7 @@ $mail->addBCC($emailReserva_Sano, $nomReserva);
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Reserva TBS';
-$mail->Body    = 'Querido '.$nomReserva.' su reserva realizada: '.$fechaHoraReserva.' ha sido realizada con exito con la siguiente disciplina: '.$arteReserva.'. En caso de cualquier clase de problema, se procederá  notificarse por correo electrónico';
+$mail->Body    = 'Querido/a '.$nomReserva.' su reserva realizada: '.$fechaHoraReserva.' ha sido realizada con exito con la siguiente disciplina: '.$arteReserva.'. En caso de cualquier clase de problema, se procederá  notificarse por correo electrónico';
 //$mail->AltBody = 'cokisssssssssssssssssssssssss';
 //$mail->SMTPDebug = 4;
 if(!$mail->send()) {
