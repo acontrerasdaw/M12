@@ -44,7 +44,7 @@ if (isset($_SESSION['training'])) {
 
         <div class="video">
             <IMG SRC="./img/bambu.jpeg" alt="Logo Mugendo"/>
-            <iframe class="videom" src="https://www.youtube.com/embed/gC0F3lD0gSw" frameborder="0" allowfullscreen></iframe>
+            <iframe class="videom" src="https://www.youtube.com/embed/gC0F3lD0gSw" frameborder="0" alt="Video promocional" allowfullscreen></iframe>
             <IMG SRC="./img/bambu2.jpeg" alt="Logo Mugendo"/>
         </div>
         <footer>

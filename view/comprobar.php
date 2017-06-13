@@ -7,7 +7,7 @@ $errores = FALSE;
 
 if(isset($enviar)){
     $errors = ["Está vacío", "Sólo caracteres", "La fecha no es correcta", 
-        "Eres menor de edad", "El formato del password no es correcto", "Formato no válido", "Formato solo numérico"];
+        "Eres menor de edad", "El formato del password no es correcto", "Formato no válido", "Formato sólo numérico"];
     $nomReserva = filter_input(INPUT_POST, 'nomReserva', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $emailReserva_Sano = filter_input(INPUT_POST, 'emailReserva', FILTER_SANITIZE_EMAIL);
     $telefonoReserva = filter_input(INPUT_POST, 'telefonoReserva', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
